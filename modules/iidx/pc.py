@@ -9,7 +9,7 @@ from core_common import core_process_request, core_prepare_response, E
 from core_database import get_db
 
 router = APIRouter(prefix="/local", tags=["local"])
-router.model_whitelist = ["LDJ", "KDZ", "JDZ"]
+router.model_whitelist = ["LDJ", "KDZ", "JDZ", "JDJ", "I00", "HDD", "GLD", "FDD", "ECO", "E11", "D01", "C02"]
 
 
 def get_profile(cid):
@@ -439,6 +439,483 @@ async def pc_get(request: Request):
                 E.rlist(),
             )
         )
+        elif game_version == 17:
+        response = E.response(
+            E.pc(
+                E.pcdata(
+                    dach=profile["dach"],
+                    dp_opt=profile["dp_opt"],
+                    dp_opt2=profile["dp_opt2"],
+                    dpnum=profile["dpnum"],
+                    gno=profile["gno"],
+                    id=djid,
+                    idstr=djid_split,
+                    liflen=profile["lift"],
+                    mcomb=0,
+                    mode=profile["mode"],
+                    name=profile["djname"],
+                    ncomb=0,
+                    pid=profile["region"],
+                    pmode=profile["pmode"],
+                    sach=profile["sach"],
+                    sdhd=profile["sdhd"],
+                    sdtype=profile["sdtype"],
+                    sflg0=-1,
+                    sflg1=-1,
+                    sp_opt=profile["sp_opt"],
+                    spnum=profile["spnum"],
+                    timing=profile["timing"],
+                ),
+                E.skin(
+                    [
+                        profile["frame"],
+                        profile["turntable"],
+                        profile["explosion"],
+                        profile["bgm"],
+                        calculate_folder_mask(profile),
+                        profile["sudden"],
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                    ],
+                    __type="u16",
+                ),
+                E.grade(
+                    dgid="-1",
+                    sgid="-1",
+                ),
+                E.ex(),
+                E.ocrs(),
+                E.rlist(),
+            )
+        )
+        elif game_version == 16:
+        response = E.response(
+            E.pc(
+                E.pcdata(
+                    dach=profile["dach"],
+                    dp_opt=profile["dp_opt"],
+                    dp_opt2=profile["dp_opt2"],
+                    dpnum=profile["dpnum"],
+                    gno=profile["gno"],
+                    id=djid,
+                    idstr=djid_split,
+                    liflen=profile["lift"],
+                    mcomb=0,
+                    mode=profile["mode"],
+                    name=profile["djname"],
+                    ncomb=0,
+                    pid=profile["region"],
+                    pmode=profile["pmode"],
+                    sach=profile["sach"],
+                    sdhd=profile["sdhd"],
+                    sdtype=profile["sdtype"],
+                    sflg0=-1,
+                    sflg1=-1,
+                    sp_opt=profile["sp_opt"],
+                    spnum=profile["spnum"],
+                    timing=profile["timing"],
+                ),
+                E.skin(
+                    [
+                        profile["frame"],
+                        profile["turntable"],
+                        profile["explosion"],
+                        profile["bgm"],
+                        calculate_folder_mask(profile),
+                        profile["sudden"],
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                    ],
+                    __type="u16",
+                ),
+                E.grade(
+                    dgid="-1",
+                    sgid="-1",
+                ),
+                E.ex(),
+                E.ocrs(),
+                E.rlist(),
+            )
+        )
+        elif game_version == 15:
+        response = E.response(
+            E.pc(
+                E.pcdata(
+                    dach=profile["dach"],
+                    dp_opt=profile["dp_opt"],
+                    dp_opt2=profile["dp_opt2"],
+                    dpnum=profile["dpnum"],
+                    gno=profile["gno"],
+                    id=djid,
+                    idstr=djid_split,
+                    liflen=profile["lift"],
+                    mcomb=0,
+                    mode=profile["mode"],
+                    name=profile["djname"],
+                    ncomb=0,
+                    pid=profile["region"],
+                    pmode=profile["pmode"],
+                    sach=profile["sach"],
+                    sdhd=profile["sdhd"],
+                    sdtype=profile["sdtype"],
+                    sflg0=-1,
+                    sflg1=-1,
+                    sp_opt=profile["sp_opt"],
+                    spnum=profile["spnum"],
+                    timing=profile["timing"],
+                ),
+                E.skin(
+                    [
+                        profile["frame"],
+                        profile["turntable"],
+                        profile["explosion"],
+                        profile["bgm"],
+                        calculate_folder_mask(profile),
+                        profile["sudden"],
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                    ],
+                    __type="u16",
+                ),
+                E.grade(
+                    dgid="-1",
+                    sgid="-1",
+                ),
+                E.ex(),
+                E.ocrs(),
+                E.rlist(),
+            )
+        )
+        elif game_version == 14:
+        response = E.response(
+            E.pc(
+                E.pcdata(
+                    dach=profile["dach"],
+                    dp_opt=profile["dp_opt"],
+                    dp_opt2=profile["dp_opt2"],
+                    dpnum=profile["dpnum"],
+                    gno=profile["gno"],
+                    id=djid,
+                    idstr=djid_split,
+                    liflen=profile["lift"],
+                    mcomb=0,
+                    mode=profile["mode"],
+                    name=profile["djname"],
+                    ncomb=0,
+                    pid=profile["region"],
+                    pmode=profile["pmode"],
+                    sach=profile["sach"],
+                    sdhd=profile["sdhd"],
+                    sdtype=profile["sdtype"],
+                    sflg0=-1,
+                    sflg1=-1,
+                    sp_opt=profile["sp_opt"],
+                    spnum=profile["spnum"],
+                    timing=profile["timing"],
+                ),
+                E.skin(
+                    [
+                        profile["frame"],
+                        profile["turntable"],
+                        profile["explosion"],
+                        profile["bgm"],
+                        calculate_folder_mask(profile),
+                        profile["sudden"],
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                    ],
+                    __type="u16",
+                ),
+                E.grade(
+                    dgid="-1",
+                    sgid="-1",
+                ),
+                E.ex(),
+                E.ocrs(),
+                E.rlist(),
+            )
+        )
+        elif game_version == 13:
+        response = E.response(
+            E.pc(
+                E.pcdata(
+                    dach=profile["dach"],
+                    dp_opt=profile["dp_opt"],
+                    dp_opt2=profile["dp_opt2"],
+                    dpnum=profile["dpnum"],
+                    gno=profile["gno"],
+                    id=djid,
+                    idstr=djid_split,
+                    liflen=profile["lift"],
+                    mcomb=0,
+                    mode=profile["mode"],
+                    name=profile["djname"],
+                    ncomb=0,
+                    pid=profile["region"],
+                    pmode=profile["pmode"],
+                    sach=profile["sach"],
+                    sdhd=profile["sdhd"],
+                    sdtype=profile["sdtype"],
+                    sflg0=-1,
+                    sflg1=-1,
+                    sp_opt=profile["sp_opt"],
+                    spnum=profile["spnum"],
+                    timing=profile["timing"],
+                ),
+                E.skin(
+                    [
+                        profile["frame"],
+                        profile["turntable"],
+                        profile["explosion"],
+                        profile["bgm"],
+                        calculate_folder_mask(profile),
+                        profile["sudden"],
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                    ],
+                    __type="u16",
+                ),
+                E.grade(
+                    dgid="-1",
+                    sgid="-1",
+                ),
+                E.ex(),
+                E.ocrs(),
+                E.rlist(),
+            )
+        )
+        elif game_version == 12:
+        response = E.response(
+            E.pc(
+                E.pcdata(
+                    dach=profile["dach"],
+                    dp_opt=profile["dp_opt"],
+                    dp_opt2=profile["dp_opt2"],
+                    dpnum=profile["dpnum"],
+                    gno=profile["gno"],
+                    id=djid,
+                    idstr=djid_split,
+                    liflen=profile["lift"],
+                    mcomb=0,
+                    mode=profile["mode"],
+                    name=profile["djname"],
+                    ncomb=0,
+                    pid=profile["region"],
+                    pmode=profile["pmode"],
+                    sach=profile["sach"],
+                    sdhd=profile["sdhd"],
+                    sdtype=profile["sdtype"],
+                    sflg0=-1,
+                    sflg1=-1,
+                    sp_opt=profile["sp_opt"],
+                    spnum=profile["spnum"],
+                    timing=profile["timing"],
+                ),
+                E.skin(
+                    [
+                        profile["frame"],
+                        profile["turntable"],
+                        profile["explosion"],
+                        profile["bgm"],
+                        calculate_folder_mask(profile),
+                        profile["sudden"],
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                    ],
+                    __type="u16",
+                ),
+                E.grade(
+                    dgid="-1",
+                    sgid="-1",
+                ),
+                E.ex(),
+                E.ocrs(),
+                E.rlist(),
+            )
+        )
+        elif game_version == 11:
+        response = E.response(
+            E.pc(
+                E.pcdata(
+                    dach=profile["dach"],
+                    dp_opt=profile["dp_opt"],
+                    dp_opt2=profile["dp_opt2"],
+                    dpnum=profile["dpnum"],
+                    gno=profile["gno"],
+                    id=djid,
+                    idstr=djid_split,
+                    liflen=profile["lift"],
+                    mcomb=0,
+                    mode=profile["mode"],
+                    name=profile["djname"],
+                    ncomb=0,
+                    pid=profile["region"],
+                    pmode=profile["pmode"],
+                    sach=profile["sach"],
+                    sdhd=profile["sdhd"],
+                    sdtype=profile["sdtype"],
+                    sflg0=-1,
+                    sflg1=-1,
+                    sp_opt=profile["sp_opt"],
+                    spnum=profile["spnum"],
+                    timing=profile["timing"],
+                ),
+                E.skin(
+                    [
+                        profile["frame"],
+                        profile["turntable"],
+                        profile["explosion"],
+                        profile["bgm"],
+                        calculate_folder_mask(profile),
+                        profile["sudden"],
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                    ],
+                    __type="u16",
+                ),
+                E.grade(
+                    dgid="-1",
+                    sgid="-1",
+                ),
+                E.ex(),
+                E.ocrs(),
+                E.rlist(),
+            )
+        )
+        elif game_version == 10:
+        response = E.response(
+            E.pc(
+                E.pcdata(
+                    dach=profile["dach"],
+                    dp_opt=profile["dp_opt"],
+                    dp_opt2=profile["dp_opt2"],
+                    dpnum=profile["dpnum"],
+                    gno=profile["gno"],
+                    id=djid,
+                    idstr=djid_split,
+                    liflen=profile["lift"],
+                    mcomb=0,
+                    mode=profile["mode"],
+                    name=profile["djname"],
+                    ncomb=0,
+                    pid=profile["region"],
+                    pmode=profile["pmode"],
+                    sach=profile["sach"],
+                    sdhd=profile["sdhd"],
+                    sdtype=profile["sdtype"],
+                    sflg0=-1,
+                    sflg1=-1,
+                    sp_opt=profile["sp_opt"],
+                    spnum=profile["spnum"],
+                    timing=profile["timing"],
+                ),
+                E.skin(
+                    [
+                        profile["frame"],
+                        profile["turntable"],
+                        profile["explosion"],
+                        profile["bgm"],
+                        calculate_folder_mask(profile),
+                        profile["sudden"],
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                    ],
+                    __type="u16",
+                ),
+                E.grade(
+                    dgid="-1",
+                    sgid="-1",
+                ),
+                E.ex(),
+                E.ocrs(),
+                E.rlist(),
+            )
+        )
+        elif game_version == 9:
+        response = E.response(
+            E.pc(
+                E.pcdata(
+                    dach=profile["dach"],
+                    dp_opt=profile["dp_opt"],
+                    dp_opt2=profile["dp_opt2"],
+                    dpnum=profile["dpnum"],
+                    gno=profile["gno"],
+                    id=djid,
+                    idstr=djid_split,
+                    liflen=profile["lift"],
+                    mcomb=0,
+                    mode=profile["mode"],
+                    name=profile["djname"],
+                    ncomb=0,
+                    pid=profile["region"],
+                    pmode=profile["pmode"],
+                    sach=profile["sach"],
+                    sdhd=profile["sdhd"],
+                    sdtype=profile["sdtype"],
+                    sflg0=-1,
+                    sflg1=-1,
+                    sp_opt=profile["sp_opt"],
+                    spnum=profile["spnum"],
+                    timing=profile["timing"],
+                ),
+                E.skin(
+                    [
+                        profile["frame"],
+                        profile["turntable"],
+                        profile["explosion"],
+                        profile["bgm"],
+                        calculate_folder_mask(profile),
+                        profile["sudden"],
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                    ],
+                    __type="u16",
+                ),
+                E.grade(
+                    dgid="-1",
+                    sgid="-1",
+                ),
+                E.ex(),
+                E.ocrs(),
+                E.rlist(),
+            )
+        )
 
     response_body, response_headers = await core_prepare_response(request, response)
     return Response(content=response_body, headers=response_headers)
@@ -509,6 +986,159 @@ async def pc_common(request: Request):
             )
         )
     elif game_version == 18:
+        response = E.response(
+            E.pc(
+                E.cmd(
+                    gmbl=1,
+                    gmbla=1,
+                    regl=1,
+                    rndp=1,
+                    hrnd=1,
+                    alls=1,
+                ),
+                E.lg(lea=1),
+                E.ir(beat=3),
+                E.ev(pha=2),
+                expire=600,
+            )
+        )
+    elif game_version == 17:
+        response = E.response(
+            E.pc(
+                E.cmd(
+                    gmbl=1,
+                    gmbla=1,
+                    regl=1,
+                    rndp=1,
+                    hrnd=1,
+                    alls=1,
+                ),
+                E.lg(lea=1),
+                E.ir(beat=3),
+                E.ev(pha=2),
+                expire=600,
+            )
+        )
+    elif game_version == 16:
+        response = E.response(
+            E.pc(
+                E.cmd(
+                    gmbl=1,
+                    gmbla=1,
+                    regl=1,
+                    rndp=1,
+                    hrnd=1,
+                    alls=1,
+                ),
+                E.lg(lea=1),
+                E.ir(beat=3),
+                E.ev(pha=2),
+                expire=600,
+            )
+        )
+    elif game_version == 15:
+        response = E.response(
+            E.pc(
+                E.cmd(
+                    gmbl=1,
+                    gmbla=1,
+                    regl=1,
+                    rndp=1,
+                    hrnd=1,
+                    alls=1,
+                ),
+                E.lg(lea=1),
+                E.ir(beat=3),
+                E.ev(pha=2),
+                expire=600,
+            )
+        )
+    elif game_version == 14:
+        response = E.response(
+            E.pc(
+                E.cmd(
+                    gmbl=1,
+                    gmbla=1,
+                    regl=1,
+                    rndp=1,
+                    hrnd=1,
+                    alls=1,
+                ),
+                E.lg(lea=1),
+                E.ir(beat=3),
+                E.ev(pha=2),
+                expire=600,
+            )
+        )
+    elif game_version == 13:
+        response = E.response(
+            E.pc(
+                E.cmd(
+                    gmbl=1,
+                    gmbla=1,
+                    regl=1,
+                    rndp=1,
+                    hrnd=1,
+                    alls=1,
+                ),
+                E.lg(lea=1),
+                E.ir(beat=3),
+                E.ev(pha=2),
+                expire=600,
+            )
+        )
+    elif game_version == 12:
+        response = E.response(
+            E.pc(
+                E.cmd(
+                    gmbl=1,
+                    gmbla=1,
+                    regl=1,
+                    rndp=1,
+                    hrnd=1,
+                    alls=1,
+                ),
+                E.lg(lea=1),
+                E.ir(beat=3),
+                E.ev(pha=2),
+                expire=600,
+            )
+        )
+    elif game_version == 11:
+        response = E.response(
+            E.pc(
+                E.cmd(
+                    gmbl=1,
+                    gmbla=1,
+                    regl=1,
+                    rndp=1,
+                    hrnd=1,
+                    alls=1,
+                ),
+                E.lg(lea=1),
+                E.ir(beat=3),
+                E.ev(pha=2),
+                expire=600,
+            )
+        )
+    elif game_version == 10:
+        response = E.response(
+            E.pc(
+                E.cmd(
+                    gmbl=1,
+                    gmbla=1,
+                    regl=1,
+                    rndp=1,
+                    hrnd=1,
+                    alls=1,
+                ),
+                E.lg(lea=1),
+                E.ir(beat=3),
+                E.ev(pha=2),
+                expire=600,
+            )
+        )
+    elif game_version == 9:
         response = E.response(
             E.pc(
                 E.cmd(
@@ -819,6 +1449,366 @@ async def pc_reg(request: Request):
             "_hide_rival_info": 1,
         }
     elif game_version == 18:
+        all_profiles_for_card["version"][str(game_version)] = {
+            "game_version": game_version,
+            "djname": name,
+            "region": int(pid),
+            "frame": 0,
+            "turntable": 0,
+            "explosion": 0,
+            "bgm": 0,
+            "folder_mask": 0,
+            "sudden": 0,
+            "dach": 0,
+            "dp_opt": 0,
+            "dp_opt2": 0,
+            "dpnum": 0,
+            "gno": 0,
+            "lift": 0,
+            "mode": 0,
+            "pmode": 0,
+            "sach": 0,
+            "sdhd": 50,
+            "sdtype": 0,
+            "sp_opt": 0,
+            "spnum": 0,
+            "timing": 0,
+            # Grades
+            "grade_single": -1,
+            "grade_double": -1,
+            "grade_values": [],
+            # Web UI/Other options
+            "_show_category_grade": 0,
+            "_show_category_status": 1,
+            "_show_category_difficulty": 1,
+            "_show_category_alphabet": 1,
+            "_show_category_rival_play": 0,
+            "_show_category_rival_winlose": 0,
+            "_show_rival_shop_info": 0,
+            "_hide_play_count": 0,
+            "_hide_rival_info": 1,
+        }
+    elif game_version == 17:
+        all_profiles_for_card["version"][str(game_version)] = {
+            "game_version": game_version,
+            "djname": name,
+            "region": int(pid),
+            "frame": 0,
+            "turntable": 0,
+            "explosion": 0,
+            "bgm": 0,
+            "folder_mask": 0,
+            "sudden": 0,
+            "dach": 0,
+            "dp_opt": 0,
+            "dp_opt2": 0,
+            "dpnum": 0,
+            "gno": 0,
+            "lift": 0,
+            "mode": 0,
+            "pmode": 0,
+            "sach": 0,
+            "sdhd": 50,
+            "sdtype": 0,
+            "sp_opt": 0,
+            "spnum": 0,
+            "timing": 0,
+            # Grades
+            "grade_single": -1,
+            "grade_double": -1,
+            "grade_values": [],
+            # Web UI/Other options
+            "_show_category_grade": 0,
+            "_show_category_status": 1,
+            "_show_category_difficulty": 1,
+            "_show_category_alphabet": 1,
+            "_show_category_rival_play": 0,
+            "_show_category_rival_winlose": 0,
+            "_show_rival_shop_info": 0,
+            "_hide_play_count": 0,
+            "_hide_rival_info": 1,
+        }
+    elif game_version == 16:
+        all_profiles_for_card["version"][str(game_version)] = {
+            "game_version": game_version,
+            "djname": name,
+            "region": int(pid),
+            "frame": 0,
+            "turntable": 0,
+            "explosion": 0,
+            "bgm": 0,
+            "folder_mask": 0,
+            "sudden": 0,
+            "dach": 0,
+            "dp_opt": 0,
+            "dp_opt2": 0,
+            "dpnum": 0,
+            "gno": 0,
+            "lift": 0,
+            "mode": 0,
+            "pmode": 0,
+            "sach": 0,
+            "sdhd": 50,
+            "sdtype": 0,
+            "sp_opt": 0,
+            "spnum": 0,
+            "timing": 0,
+            # Grades
+            "grade_single": -1,
+            "grade_double": -1,
+            "grade_values": [],
+            # Web UI/Other options
+            "_show_category_grade": 0,
+            "_show_category_status": 1,
+            "_show_category_difficulty": 1,
+            "_show_category_alphabet": 1,
+            "_show_category_rival_play": 0,
+            "_show_category_rival_winlose": 0,
+            "_show_rival_shop_info": 0,
+            "_hide_play_count": 0,
+            "_hide_rival_info": 1,
+        }
+    elif game_version == 15:
+        all_profiles_for_card["version"][str(game_version)] = {
+            "game_version": game_version,
+            "djname": name,
+            "region": int(pid),
+            "frame": 0,
+            "turntable": 0,
+            "explosion": 0,
+            "bgm": 0,
+            "folder_mask": 0,
+            "sudden": 0,
+            "dach": 0,
+            "dp_opt": 0,
+            "dp_opt2": 0,
+            "dpnum": 0,
+            "gno": 0,
+            "lift": 0,
+            "mode": 0,
+            "pmode": 0,
+            "sach": 0,
+            "sdhd": 50,
+            "sdtype": 0,
+            "sp_opt": 0,
+            "spnum": 0,
+            "timing": 0,
+            # Grades
+            "grade_single": -1,
+            "grade_double": -1,
+            "grade_values": [],
+            # Web UI/Other options
+            "_show_category_grade": 0,
+            "_show_category_status": 1,
+            "_show_category_difficulty": 1,
+            "_show_category_alphabet": 1,
+            "_show_category_rival_play": 0,
+            "_show_category_rival_winlose": 0,
+            "_show_rival_shop_info": 0,
+            "_hide_play_count": 0,
+            "_hide_rival_info": 1,
+        }
+    elif game_version == 14:
+        all_profiles_for_card["version"][str(game_version)] = {
+            "game_version": game_version,
+            "djname": name,
+            "region": int(pid),
+            "frame": 0,
+            "turntable": 0,
+            "explosion": 0,
+            "bgm": 0,
+            "folder_mask": 0,
+            "sudden": 0,
+            "dach": 0,
+            "dp_opt": 0,
+            "dp_opt2": 0,
+            "dpnum": 0,
+            "gno": 0,
+            "lift": 0,
+            "mode": 0,
+            "pmode": 0,
+            "sach": 0,
+            "sdhd": 50,
+            "sdtype": 0,
+            "sp_opt": 0,
+            "spnum": 0,
+            "timing": 0,
+            # Grades
+            "grade_single": -1,
+            "grade_double": -1,
+            "grade_values": [],
+            # Web UI/Other options
+            "_show_category_grade": 0,
+            "_show_category_status": 1,
+            "_show_category_difficulty": 1,
+            "_show_category_alphabet": 1,
+            "_show_category_rival_play": 0,
+            "_show_category_rival_winlose": 0,
+            "_show_rival_shop_info": 0,
+            "_hide_play_count": 0,
+            "_hide_rival_info": 1,
+        }
+    elif game_version == 13:
+        all_profiles_for_card["version"][str(game_version)] = {
+            "game_version": game_version,
+            "djname": name,
+            "region": int(pid),
+            "frame": 0,
+            "turntable": 0,
+            "explosion": 0,
+            "bgm": 0,
+            "folder_mask": 0,
+            "sudden": 0,
+            "dach": 0,
+            "dp_opt": 0,
+            "dp_opt2": 0,
+            "dpnum": 0,
+            "gno": 0,
+            "lift": 0,
+            "mode": 0,
+            "pmode": 0,
+            "sach": 0,
+            "sdhd": 50,
+            "sdtype": 0,
+            "sp_opt": 0,
+            "spnum": 0,
+            "timing": 0,
+            # Grades
+            "grade_single": -1,
+            "grade_double": -1,
+            "grade_values": [],
+            # Web UI/Other options
+            "_show_category_grade": 0,
+            "_show_category_status": 1,
+            "_show_category_difficulty": 1,
+            "_show_category_alphabet": 1,
+            "_show_category_rival_play": 0,
+            "_show_category_rival_winlose": 0,
+            "_show_rival_shop_info": 0,
+            "_hide_play_count": 0,
+            "_hide_rival_info": 1,
+        }
+    elif game_version == 12:
+        all_profiles_for_card["version"][str(game_version)] = {
+            "game_version": game_version,
+            "djname": name,
+            "region": int(pid),
+            "frame": 0,
+            "turntable": 0,
+            "explosion": 0,
+            "bgm": 0,
+            "folder_mask": 0,
+            "sudden": 0,
+            "dach": 0,
+            "dp_opt": 0,
+            "dp_opt2": 0,
+            "dpnum": 0,
+            "gno": 0,
+            "lift": 0,
+            "mode": 0,
+            "pmode": 0,
+            "sach": 0,
+            "sdhd": 50,
+            "sdtype": 0,
+            "sp_opt": 0,
+            "spnum": 0,
+            "timing": 0,
+            # Grades
+            "grade_single": -1,
+            "grade_double": -1,
+            "grade_values": [],
+            # Web UI/Other options
+            "_show_category_grade": 0,
+            "_show_category_status": 1,
+            "_show_category_difficulty": 1,
+            "_show_category_alphabet": 1,
+            "_show_category_rival_play": 0,
+            "_show_category_rival_winlose": 0,
+            "_show_rival_shop_info": 0,
+            "_hide_play_count": 0,
+            "_hide_rival_info": 1,
+        }
+    elif game_version == 11:
+        all_profiles_for_card["version"][str(game_version)] = {
+            "game_version": game_version,
+            "djname": name,
+            "region": int(pid),
+            "frame": 0,
+            "turntable": 0,
+            "explosion": 0,
+            "bgm": 0,
+            "folder_mask": 0,
+            "sudden": 0,
+            "dach": 0,
+            "dp_opt": 0,
+            "dp_opt2": 0,
+            "dpnum": 0,
+            "gno": 0,
+            "lift": 0,
+            "mode": 0,
+            "pmode": 0,
+            "sach": 0,
+            "sdhd": 50,
+            "sdtype": 0,
+            "sp_opt": 0,
+            "spnum": 0,
+            "timing": 0,
+            # Grades
+            "grade_single": -1,
+            "grade_double": -1,
+            "grade_values": [],
+            # Web UI/Other options
+            "_show_category_grade": 0,
+            "_show_category_status": 1,
+            "_show_category_difficulty": 1,
+            "_show_category_alphabet": 1,
+            "_show_category_rival_play": 0,
+            "_show_category_rival_winlose": 0,
+            "_show_rival_shop_info": 0,
+            "_hide_play_count": 0,
+            "_hide_rival_info": 1,
+        }
+    elif game_version == 10:
+        all_profiles_for_card["version"][str(game_version)] = {
+            "game_version": game_version,
+            "djname": name,
+            "region": int(pid),
+            "frame": 0,
+            "turntable": 0,
+            "explosion": 0,
+            "bgm": 0,
+            "folder_mask": 0,
+            "sudden": 0,
+            "dach": 0,
+            "dp_opt": 0,
+            "dp_opt2": 0,
+            "dpnum": 0,
+            "gno": 0,
+            "lift": 0,
+            "mode": 0,
+            "pmode": 0,
+            "sach": 0,
+            "sdhd": 50,
+            "sdtype": 0,
+            "sp_opt": 0,
+            "spnum": 0,
+            "timing": 0,
+            # Grades
+            "grade_single": -1,
+            "grade_double": -1,
+            "grade_values": [],
+            # Web UI/Other options
+            "_show_category_grade": 0,
+            "_show_category_status": 1,
+            "_show_category_difficulty": 1,
+            "_show_category_alphabet": 1,
+            "_show_category_rival_play": 0,
+            "_show_category_rival_winlose": 0,
+            "_show_rival_shop_info": 0,
+            "_hide_play_count": 0,
+            "_hide_rival_info": 1,
+        }
+    elif game_version == 9:
         all_profiles_for_card["version"][str(game_version)] = {
             "game_version": game_version,
             "djname": name,
