@@ -10,13 +10,27 @@ router = APIRouter(prefix="/core", tags=["cardmng"])
 def get_target_table(game_id):
     target_table = {
         "LDJ": "iidx_profile",
+        "KDZ": "iidx_profile",
+        "JDZ": "iidx_profile",
+        "JDJ": "iidx_profile",
+        "I00": "iidx_profile",
+        "HDD": "iidx_profile",
+        "GLD": "iidx_profile",
+        "FDD": "iidx_profile",
+        "ECO": "iidx_profile",
+        "E11": "iidx_profile",
+        "D01": "iidx_profile",
+        "C02": "iidx_profile",
         "MDX": "ddr_profile",
+        "KDX": "ddr_profile",
+        "JDX": "ddr_profile",
+        "HDX": "ddr_profile",
+        "FDH": "ddr_profile",
+        "GDJ": "ddr_profile",
         "KFC": "sdvx_profile",
         "M32": "gitadora_profile",
         "PAN": "nostalgia_profile",
         "REC": "dancerush_profile",
-        "JDZ": "iidx_profile",
-        "KDZ": "iidx_profile",
     }
 
     return target_table[game_id]
