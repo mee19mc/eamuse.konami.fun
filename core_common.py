@@ -84,7 +84,46 @@ async def core_get_game_version_from_software_version(software_version):
         return 19
     elif model == "JDZ":
         return 18
+    elif model == "JDJ":
+        return 17
+    elif model == "I00":
+        return 16
+    elif model == "HDD":
+        return 15
+    elif model == "GLD":
+        return 14
+    elif model == "FDD":
+        return 13
+    elif model == "ECO":
+        return 12
+    elif model == "E11":
+        return 11
+    elif model == "D01":
+        return 10
+    elif model == "C02":
+        return 9
+        
+    elif model == "L44":
+        return 19
+    elif model == "K44":
+        return 4
+    elif model == "J44":
+        return 3
+    elif model == "I44":
+        return 2
+    elif model == "H44":
+        return 1
 
+    elif model == "MBR":
+        return 3
+    elif model == "LBR":
+        return 2
+    elif model == "KBR":
+        return 1
+        
+    elif model == "KDM":
+        return 0
+        
     elif model == "M32":
         if ext >= 2024031300:
             return 10
@@ -96,7 +135,7 @@ async def core_get_game_version_from_software_version(software_version):
             return 7
         elif ext >= 2018072700:
             return 6
-        # TODO: Support versions 1-5 (never)
+        # TODO: Support versions 1-5 (IMPORT FROM ASPHYXIA)
         elif ext >= 2017090600:
             return 5
         elif ext >= 2017011800:
@@ -113,16 +152,24 @@ async def core_get_game_version_from_software_version(software_version):
             return 19
 
     elif model == "KFC":
-        # TODO: Fix newer than 2022 versions (never, I don't play this game)
-        if ext >= 2020090402:  # ???
+        # TODO: Fix newer than 2022 versions
             return 6
 
     elif model == "REC":
         return 1
 
-    # TODO: ???
-    # elif model == "PAN":
-    #     return 0
+    # WIP
+     elif model == "PAN":
+         return 0
+
+    elif model == "QMA":
+        return 1
+    elif model == "QJK":
+        return 1
+    elif model == "HCK":
+        return 1
+    elif model == "FCK":
+        return 1
 
     else:
         return 0
